@@ -1,6 +1,6 @@
 # budget-control
 
-This is a Study Project.
+This is a Study Project. Made with love ❤
 
 ## Recommended IDE Setup
 
