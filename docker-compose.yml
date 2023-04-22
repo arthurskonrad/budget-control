@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  mongo:
+    container_name: mongo
+    build:
+      context: ./.docker/build/db
+      dockerfile: Dockerfile
+    environment:
+      MONGO_INITDB_DATABASE: server
+    volumes:
+      - .docker/data/mongo:/data/db
+      - .docker/config/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+
+  server:
+    container_name: server
+    build:
+      context: ./.docker/build/server
+      dockerfile: Dockerfile
+    volumes:
+      - ./server:/var/www
+    tty: true
+    depends_on:
+      - mongo
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/server
+
+  app:
+    container_name: app
+    build:
+      context: ./.docker/build/app
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/var/www
+    tty: true
+    depends_on:
+      - server
