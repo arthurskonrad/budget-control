@@ -1,0 +1,1 @@
+- Atualizar readme com setup
