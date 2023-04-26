@@ -16,6 +16,7 @@ const user = {
   email: '',
   imageUrl: 'https://avatars.githubusercontent.com/u/23040895?s=96&v=4'
 }
+
 const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'Login', href: '/login', current: false },
@@ -27,11 +28,30 @@ const navigation = [
   { name: 'Income', href: '/user/id/income', current: false },
   { name: 'Transaction', href: '/user/id/transaction', current: false }
 ]
+
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
   { name: 'Settings', href: '#' },
   { name: 'Sign out', href: '#' }
 ]
+</script>
+
+<script lang="ts">
+import api from './api'
+
+export default {
+  name: 'App',
+
+  async created() {
+    try {
+      const response = await api.get('/users/1')
+
+      console.log(response?.data[0])
+    } catch (error) {
+      console.log(error)
+    }
+  }
+}
 </script>
 
 <template>
