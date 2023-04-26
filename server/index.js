@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const cors = require('cors')
 
 const app = express()
 
@@ -17,11 +18,11 @@ mongoose
   })
 
 app.use(express.json())
-
-app.get('/', (req, res) => {
-  res.send('Hello, world!')
-})
-
+app.use(
+  cors({
+    origin: 'http://localhost:5173'
+  })
+)
 const User = mongoose.model('User', {
   id: Number,
   name: String,
