@@ -1,1 +1,2 @@
-- Atualizar readme com setup
+- criar tarefas aqui e depois passar pro github projects
+- criar codecov
