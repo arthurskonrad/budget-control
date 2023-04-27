@@ -1,5 +1,13 @@
+<script lang="ts">
+import Title from '@/components/Title/Title.vue'
+
+export default {
+  components: {
+    Title
+  }
+}
+</script>
+
 <template>
-  <div class="transaction">
-    <h1>This is a transaction page</h1>
-  </div>
+  <Title title="Transaction" />
 </template>

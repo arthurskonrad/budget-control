@@ -1,2 +1,8 @@
 - criar tarefas aqui e depois passar pro github projects
 - criar codecov
+- rodar testes e2e no docker
+- trocar license pra uppercase
+- criar template de PR
+- pipeline github actions testes
+- pipeline github actions lint
+-

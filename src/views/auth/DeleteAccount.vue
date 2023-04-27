@@ -1,5 +1,13 @@
+<script lang="ts">
+import Title from '@/components/Title/Title.vue'
+
+export default {
+  components: {
+    Title
+  }
+}
+</script>
+
 <template>
-  <div class="delete-account">
-    <h1>This is a delete-account page</h1>
-  </div>
+  <Title title="Delete Account" />
 </template>
