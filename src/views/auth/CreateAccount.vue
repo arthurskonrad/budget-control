@@ -1,5 +1,13 @@
+<script lang="ts">
+import Title from '@/components/Title/Title.vue'
+
+export default {
+  components: {
+    Title
+  }
+}
+</script>
+
 <template>
-  <div class="create-account">
-    <h1>This is a create account page</h1>
-  </div>
+  <Title title="Create Account" />
 </template>
