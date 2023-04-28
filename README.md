@@ -121,6 +121,12 @@ docker compose exec server bash
 node index.js
 ```
 
+### Lint with [ESLint](https://eslint.org/)
+
+```bash
+npm run lint
+```
+
 ## Acknowledgments
 
 This project was developed as a learning exercise by Arthur Schulle Konrad. Made with love ❤
