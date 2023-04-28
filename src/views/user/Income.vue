@@ -1,11 +1,11 @@
 <script lang="ts">
-import Title from "@/components/Title/Title.vue";
+import TitleHeader from "@/components/TitleHeader/TitleHeader.vue";
 
-export default {
+export default (await import("vue")).defineComponent({
   components: {
-    Title,
+    TitleHeader,
   },
-};
+});
 </script>
 
 <template>

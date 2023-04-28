@@ -1,6 +1,6 @@
 <script lang="ts">
-export default {
-  name: "Title",
+export default (await import("vue")).defineComponent({
+  name: "TitleHeader",
 
   props: {
     title: {
@@ -8,7 +8,7 @@ export default {
       required: true,
     },
   },
-};
+});
 </script>
 
 <template>
