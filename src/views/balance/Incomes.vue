@@ -9,5 +9,5 @@ export default (await import("vue")).defineComponent({
 </script>
 
 <template>
-  <Title title="Incomes" />
+  <TitleHeader title="Incomes" />
 </template>
