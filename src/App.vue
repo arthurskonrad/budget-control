@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from "vue-router";
 import {
   Disclosure,
   DisclosureButton,
@@ -7,51 +7,51 @@ import {
   Menu,
   MenuButton,
   MenuItem,
-  MenuItems
-} from '@headlessui/vue'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
+  MenuItems,
+} from "@headlessui/vue";
+import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/vue/24/outline";
 
 const user = {
-  name: 'Arthur Schulle Konrad',
-  email: '',
-  imageUrl: 'https://avatars.githubusercontent.com/u/23040895?s=96&v=4'
-}
+  name: "Arthur Schulle Konrad",
+  email: "",
+  imageUrl: "https://avatars.githubusercontent.com/u/23040895?s=96&v=4",
+};
 
 const navigation = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'Login', href: '/login', current: false },
-  { name: 'CreateAccount', href: '/create-account', current: false },
-  { name: 'DeleteAccount', href: '/delete-account', current: false },
-  { name: 'Balance', href: '/user/id/balance', current: false },
-  { name: 'Incomes', href: '/user/id/incomes', current: false },
-  { name: 'Transactions', href: '/user/id/transactions', current: false },
-  { name: 'Income', href: '/user/id/income', current: false },
-  { name: 'Transaction', href: '/user/id/transaction', current: false }
-]
+  { name: "Home", href: "/", current: true },
+  { name: "Login", href: "/login", current: false },
+  { name: "CreateAccount", href: "/create-account", current: false },
+  { name: "DeleteAccount", href: "/delete-account", current: false },
+  { name: "Balance", href: "/user/id/balance", current: false },
+  { name: "Incomes", href: "/user/id/incomes", current: false },
+  { name: "Transactions", href: "/user/id/transactions", current: false },
+  { name: "Income", href: "/user/id/income", current: false },
+  { name: "Transaction", href: "/user/id/transaction", current: false },
+];
 
 const userNavigation = [
-  { name: 'Your Profile', href: '#' },
-  { name: 'Settings', href: '#' },
-  { name: 'Sign out', href: '#' }
-]
+  { name: "Your Profile", href: "#" },
+  { name: "Settings", href: "#" },
+  { name: "Sign out", href: "#" },
+];
 </script>
 
 <script lang="ts">
-import api from './api'
+import api from "./api";
 
 export default {
-  name: 'App',
+  name: "App",
 
   async created() {
     try {
-      const response = await api.get('/users/1')
+      const response = await api.get("/users/1");
 
-      console.log(response?.data[0])
+      console.log(response?.data[0]);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
-}
+  },
+};
 </script>
 
 <template>
@@ -79,7 +79,7 @@ export default {
                     item.current
                       ? 'bg-gray-900 text-white'
                       : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'rounded-md px-3 py-2 text-sm font-medium'
+                    'rounded-md px-3 py-2 text-sm font-medium',
                   ]"
                   :aria-current="item.current ? 'page' : undefined"
                   >{{ item.name }}</RouterLink
@@ -123,7 +123,7 @@ export default {
                         :href="item.href"
                         :class="[
                           active ? 'bg-gray-100' : '',
-                          'block px-4 py-2 text-sm text-gray-700'
+                          'block px-4 py-2 text-sm text-gray-700',
                         ]"
                         >{{ item.name }}</a
                       >
@@ -157,7 +157,7 @@ export default {
               item.current
                 ? 'bg-gray-900 text-white'
                 : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-              'block rounded-md px-3 py-2 text-base font-medium'
+              'block rounded-md px-3 py-2 text-base font-medium',
             ]"
             :aria-current="item.current ? 'page' : undefined"
             >{{ item.name }}</DisclosureButton
@@ -169,8 +169,12 @@ export default {
               <img class="h-10 w-10 rounded-full" :src="user.imageUrl" alt="" />
             </div>
             <div class="ml-3">
-              <div class="text-base font-medium leading-none text-white">{{ user.name }}</div>
-              <div class="text-sm font-medium leading-none text-gray-400">{{ user.email }}</div>
+              <div class="text-base font-medium leading-none text-white">
+                {{ user.name }}
+              </div>
+              <div class="text-sm font-medium leading-none text-gray-400">
+                {{ user.email }}
+              </div>
             </div>
             <button
               type="button"
