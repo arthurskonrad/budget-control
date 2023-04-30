@@ -19,7 +19,6 @@ With Budget Control, users can create and manage their budgets, track their expe
 
 - User authentication and authorization
 - Create and manage budgets
-- Track expenses and income
 - View reports of spending habits
 - Responsive and mobile-friendly design
 
