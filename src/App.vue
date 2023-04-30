@@ -11,7 +11,7 @@ export default {
 
   async created() {
     try {
-      const response = await api.get("/users/1");
+      const response = await api.get("/user/1");
       console.log(response?.data[0]);
     } catch (error) {
       console.log(error);
