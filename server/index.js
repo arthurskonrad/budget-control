@@ -18,13 +18,13 @@ mongoose
 
 const app = express();
 
-app.use(createRouter(app));
-app.use(express.json());
 app.use(
   cors({
     origin: "http://localhost:5173",
   })
 );
+app.use(createRouter(app));
+app.use(express.json());
 
 app.listen(process.env.PORT || 3000, () => {
   console.log(`Server started on port ${process.env.PORT || 3000}`);
