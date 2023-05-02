@@ -12,9 +12,9 @@ export default (await import("vue")).defineComponent({
 </script>
 
 <template>
-  <header class="bg-white shadow">
+  <header class="dark:bg-slate-800 bg-white shadow">
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-      <h1 class="text-3xl font-bold tracking-tight text-gray-900">
+      <h1 class="text-3xl font-bold tracking-tight dark:text-white text-gray-900">
         {{ title }}
       </h1>
     </div>
